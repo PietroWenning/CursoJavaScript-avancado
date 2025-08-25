@@ -3,7 +3,7 @@ const verdadeira = true;
 //var só tme escopo de função 
 
 
-let nome = 'Pietro'//criando
+/*let nome = 'Pietro'//criando
 var nome2 ='Pietro'
 
 if(verdadeira){
@@ -13,4 +13,5 @@ if(verdadeira){
         let nome = 'outra coisa'
         console.log(nome, nome2)
     }
-}
+}*/
+
