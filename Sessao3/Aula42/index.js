@@ -1,8 +1,12 @@
-
-
-
+function soma(x,y){
+    if(typeof x !== 'number' || typeof y !=='number'){
+        throw new Error('o x e y precisam ser numeros')
+        }
+    return x+y
+}
 try{
-console.log(naoExisto)
-}catch(err){
-    console.log('Não existo')
+    console.log(soma(1,2))
+    console.log(soma('1',2))
+}catch(error){
+    console.log('alguma coisa mais amigavel para o usuario')
 }
