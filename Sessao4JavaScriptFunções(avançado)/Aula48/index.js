@@ -12,18 +12,22 @@
 //     console.log(nome, sobrenome, idade)
 // }
 // funcao( {nome: 'Pietro', sobrenome:'Calebe', idade: 16})
-function conta(operador, acumulador, ...numeros){
-    for(let numero of numeros){
-        if(operador === '+') acumulador += numero
-        if(operador === '-') acumulador -= numero
-        if(operador === '/') acumulador /= numero
-        if(operador === '*') acumulador *= numero
-    }
-    console.log(acumulador)
-}
+// function conta(operador, acumulador, ...numeros){
+//     for(let numero of numeros){
+//         if(operador === '+') acumulador += numero
+//         if(operador === '-') acumulador -= numero
+//         if(operador === '/') acumulador /= numero
+//         if(operador === '*') acumulador *= numero
+//     }
+//     console.log(acumulador)
+// }
 
-conta('+', 0, 20,30,40,50)
-conta('*', 1, 20,30,40,50)
-conta('-', 100, 20,30,40,50)
-conta('/', 100000, 20,2,5,10)
-conta('/', 100000, 2,2,5,10)
+// conta('+', 0, 20,30,40,50)
+// conta('*', 1, 20,30,40,50)
+// conta('-', 100, 20,30,40,50)
+// conta('/', 100000, 20,2,5,10)
+// conta('/', 100000, 2,2,5,10)
+const conta = (...args)=>{
+    console.log(args)
+}
+conta('+', 1,20,30,40,50)
