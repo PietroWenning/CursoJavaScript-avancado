@@ -1,6 +1,3 @@
-const nome =['maria', 'Joao'
-]
-const novo =nome;
-novo.pop()
+const nome =['maria', 'Joao']
 console.log(nome)
 console.log(novo)
