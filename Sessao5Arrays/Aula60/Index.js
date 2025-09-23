@@ -12,7 +12,7 @@ const pessoas = [
 ];
 
 // Filtrar pessoas maiores de 18 anos
-//Nomes que termina com A
+//Nomes que termina com A7uj j 7u bvnm,
 const maiores = pessoas.filter(pessoa => pessoa.idade >= 18);
 const nomeTerminaA = pessoas.filter(obj => {
     return obj.nome.toLowerCase().endsWith('a'); 
