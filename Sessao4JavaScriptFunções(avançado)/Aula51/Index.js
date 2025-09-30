@@ -1,9 +1,9 @@
-function retornarFuncao() {
-    const nome = 'Pietro';
+function retornarNomeProprio(nome) {
     return function() {
-        return nome;}
-    }
-const funcao = retornarFuncao('pietro');
-const funcao2 = retornarFuncao('amanda');
-console.dir(funcao());
-console.dir(funcao2());
+        return nome;
+    };
+}
+const retornaNomePietro = retornarNomeProprio('pietro');
+const retonarNomeAmanda = retornarNomeProprio('amanda');
+console.dir(retonarNomeAmanda());
+console.dir(retornaNomePietro());
