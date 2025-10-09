@@ -1,0 +1,4 @@
+const objA = {
+    chave:'A',
+
+};
