@@ -1,7 +1,10 @@
 function velocidade(velocidadeAtual = 0) {
-if(velocidadeAtual <= 70 )  return `Velocidade Permitida: ${velocidadeAtual}Km/h`;
-else return `Velocidade Acima do Permitido: ${velocidadeAtual}Km/h - MULTADO!`;
+    if (velocidadeAtual <= 70 ){
+        return `Velocidade Permitida: ${velocidadeAtual}Km/h`;
+    }
+    else {return `Velocidade Acima do Permitido: ${velocidadeAtual}Km/h - MULTADO!`
+    };
 }
-const retornaVelocidade = velocidade(560);
+const retornaVelocidade = velocidade(60);
 console.log(retornaVelocidade);
 

@@ -12,12 +12,13 @@ function calcular(pessoasNoElevador, limitePeso) {
     const somaPeso = pessoasNoElevador.reduce((acc, pessoa) => acc + pessoa.peso, 0);
     console.log(`peso total das pessoas no elevador: ${somaPeso}Kg`);
 
-    if (somaPeso < limitePeso) return  ` ${somaPeso}Kg Ok, peso normal`;
+    if (somaPeso < limitePeso) {return  ` ${somaPeso}Kg Ok, peso normal`
+  }
     else if (somaPeso === limitePeso) return ` ${somaPeso}Kg Cuidado, peso elevado`;
     else return ` ${somaPeso}Kg fuuuuu, vai cair. peso acima do limite`;
 }
 
-const pessoasNoElevador = [pessoas[0], pessoas[3], pessoas[5], pessoas[6], pessoas[1]]; 
+const pessoasNoElevador = [pessoas[0], pessoas[3], pessoas[5],pessoas[6]]; 
 const pesoLimite =300
 const resultado = calcular(pessoasNoElevador, pesoLimite);
 
