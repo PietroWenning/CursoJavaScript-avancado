@@ -10,8 +10,33 @@ function esperaAi(msg,tempo){
     }, tempo);
      });
 }
-esperaAi('Frase 1', aleatorio(1000,3000))
-.then(resposta => {
-    console.log(resposta);
-    return esperaAi('Frase 2', aleatorio(1000,3000));
+// esperaAi('Frase 1', aleatorio(1000,3000))
+// .then(resposta => {
+//     console.log(resposta);
+//     return esperaAi('Frase 2', aleatorio(1000,3000));
+// }).then(resposta => {
+//     console.log(resposta);
+//     return esperaAi('Frase 3', aleatorio(1000,3000));
+// })
+// .then(resposta => {
+//     console.log(resposta);
+// }).catch(e => {
+//     console.log('ERRO:', e);
+// });
+console.log('carregou a tela de lista de carros');
+console.log('Clicou para pesquisar os carros')
+listaCarros()
+.then(carros => {
+    console.log(carros);
+    console.log('Carros carregados');
 })
+console.log('Aguardando os carros...');
+for(let a =0; a<10000;a++){
+    console.log(`numero: ${a}`)
+}
+
+function listaCarros(){
+    return new Promise((resolve, reject) => {
+       return resolve
+    })
+}
