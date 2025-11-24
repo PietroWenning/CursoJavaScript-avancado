@@ -3,105 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>API Jogos Gratuitos</title>
-
-    <style>
-        .container{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-        }
-        .card{
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 16px;
-            width: 200px;
-            text-align: center;
-        }
-        .card img{
-            width: 100%;
-            border-radius: 8px;
-        }
-        h1{
-            text-align: center;
-            font-size: 30px;
-            width: 100%;
-        }
-        h3{
-            font-size: 20px;
-        }
-        p{
-            font-size: 14px;
-        }
-        button{
-            padding: 8px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            color: black;
-            background-color: white;
-            margin: 10px;
-        }
-    </style>
 </head>
 <body>
 
-    <div class="container" id="jogos-container">
-        <h1>API Jogos Gratuitos</h1>
+<div class="container" id="jogos-container">
+    <h1>API Jogos Gratuitos</h1>
+</div>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close" class="close">&times;</span>
+
+        <img id="modalImg" src="">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <p id="modalDesc2"></p>
+
+        <a id="modalBuy" target="_blank" class="buy-btn">Adquirir o jogo</a>
     </div>
-
-<script>
-function chamarApi() {
-    const url = "https://free-to-play-games-database.p.rapidapi.com/api/games";
-
-    const options = {
-        method: "GET",
-        headers: {
-            "x-rapidapi-key": "4b486ef7e2mshfc7f90decb9ae84p1d5bb4jsnec0c2e8004fd",
-            "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
-        }
-    };
-
-    fetch(url, options)
-        .then(response => response.json())
-        .then(dados => {
-            const container = document.querySelector('#jogos-container');
-
-            dados.map(jogo => {
-                const card = document.createElement('div');
-                card.classList.add("card");
-                
-                card.addEventListener("click", () => {
-                window.open(jogo.game_url, "_blank");
-            });
-
-                const img = document.createElement('img');
-                img.src = jogo.thumbnail;
-                img.alt = jogo.title;
-
-                const titulo = document.createElement('h3');
-                titulo.textContent = jogo.title;
-                 
-                const paragrafo = document.createElement('p')
-                paragrafo.textContent ='Se quiser saber mais'
-                
-                const button = document.createElement('button')
-                button.textContent = 'Clique Aqui'
-
-                card.appendChild(img);
-                card.appendChild(titulo);
-                card.appendChild(paragrafo)
-                card.appendChild(button)
-        
-                container.appendChild(card);
-            
-            });
-        })
-        .catch(error => console.error(error));
-}
-
-setTimeout(chamarApi, 300);
-</script>
+</div>
+<script src="app.js"></script>
 
 </body>
 </html>
