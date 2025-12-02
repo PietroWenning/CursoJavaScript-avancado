@@ -1,9 +1,11 @@
 fetch('pessoas.json')
  .then(resposta => resposta.json())
- .then(json => carregaElementosNaPagina())
+ .then(json => carregaElementosNaPagina(json))
 
- function carregaElementosNaPagina(){
+ function carregaElementosNaPagina(json){
+    const table = document.createElement('table')
     for(let pessoa of json){
-        console.log(pessoa.nome)
+        const tr = document.createElement('tr')
+        console.log(pessoa.idade)
     }
  }
